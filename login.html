@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Dimond City RP</title>
+    <link rel="stylesheet" href="style.login.css">
+</head>
+<body>
+    <header>
+        <h1>Login to Dimond City RP</h1>
+    </header>
+    <main>
+        <form id="loginForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" required>
+            <button type="submit">Login</button>
+        </form>
+    </main>
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const username = document.getElementById('username').value;
+
+            // تخزين اسم المستخدم في localStorage
+            localStorage.setItem('username', username);
+
+            // إعادة توجيه المستخدم إلى صفحة الـ Dashboard
+            window.location.href = 'dashboard.html';
+        });
+    </script>
+</body>
+</html>

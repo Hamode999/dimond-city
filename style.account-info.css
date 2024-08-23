@@ -1,0 +1,68 @@
+/* Reset default margins and paddings */
+body, h1, p, label {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic body styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #f3f4f6;
+    color: #333;
+    text-align: center;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Header styles */
+header {
+    background: linear-gradient(135deg, #3498db, #2c3e50);
+    color: #ecf0f1;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 20px;
+}
+
+/* Main content styles */
+main {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    max-width: 800px;
+    width: 100%;
+}
+
+/* Account info styles */
+.account-info {
+    text-align: left;
+}
+
+.account-info h2 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.info-item {
+    margin-bottom: 20px;
+}
+
+.info-item label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.info-item p {
+    font-size: 1.2em;
+    color: #555;
+}

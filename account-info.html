@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Information</title>
+    <link rel="stylesheet" href="style.account-info.css">
+</head>
+<body>
+    <header>
+        <h1>Account Information</h1>
+    </header>
+    <main>
+        <section class="account-info">
+            <h2>User Details</h2>
+            <div class="info-item">
+                <label for="username">Username:</label>
+                <p id="usernameDisplay">Loading...</p>
+            </div>
+            <div class="info-item">
+                <label for="password">Password:</label>
+                <p id="passwordDisplay">******</p>
+            </div>
+        </section>
+    </main>
+    <script>
+        // جلب اسم المستخدم وكلمة المرور من localStorage
+        const username = localStorage.getItem('username');
+        const password = localStorage.getItem('password'); // تأكد من أنك تخزن كلمة المرور بشكل آمن
+
+        const usernameDisplay = document.getElementById('usernameDisplay');
+        const passwordDisplay = document.getElementById('passwordDisplay');
+
+        // عرض البيانات في الصفحة
+        if (username) {
+            usernameDisplay.textContent = username;
+        }
+        if (password) {
+            passwordDisplay.textContent = password; // تأكد من التعامل مع كلمات المرور بشكل آمن
+        }
+    </script>
+</body>
+</html>

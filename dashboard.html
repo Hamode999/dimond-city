@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Dimond City RP</title>
+    <link rel="stylesheet" href="style.dashboard.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Your Dashboard</h1>
+        <div id="userMenu" class="user-menu">
+            <span id="usernameDisplay">User</span>
+            <div id="userOptions" class="dropdown">
+                <a href="account-info.html" id="accountInfo">حول الحساب</a>
+                <a href="#" id="settings">الإعدادات</a>
+                <a href="#" id="help">المساعدة</a>
+                <a href="#" id="logout">تسجيل الخروج</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="section">
+            <h2>Latest Activities</h2>
+            <p>Your recent activities and server updates will be displayed here.</p>
+            <div class="button-container">
+                <a href="#features" class="button primary-button">Features</a>
+                <a href="#contact" class="button secondary-button">Contact Us</a>
+                <a href="#about" class="button tertiary-button">About Us</a>
+            </div>
+        </section>
+        <section class="section testimonial">
+            <h2>What Our Users Say</h2>
+            <p>"This is the best dashboard I've ever used!" - Happy User</p>
+        </section>
+    </main>
+    <script>
+        // جلب اسم المستخدم من localStorage
+        const username = localStorage.getItem('username');
+        const usernameDisplay = document.getElementById('usernameDisplay');
+
+        // عرض اسم المستخدم في الزاوية العلوية اليسرى
+        if (username) {
+            usernameDisplay.textContent = username;
+        }
+
+        // إضافة تأثير القائمة المنسدلة
+        usernameDisplay.addEventListener('click', function() {
+            document.getElementById('userOptions').classList.toggle('show');
+        });
+
+        // التعامل مع الخيارات
+        document.getElementById('accountInfo').addEventListener('click', function() {
+            alert('اسم المستخدم: ' + username);
+        });
+
+        document.getElementById('logout').addEventListener('click', function() {
+            // إزالة اسم المستخدم من localStorage
+            localStorage.removeItem('username');
+            // إعادة التوجيه إلى صفحة تسجيل الدخول
+            window.location.href = 'login.html';
+        });
+    </script>
+</body>
+</html>
